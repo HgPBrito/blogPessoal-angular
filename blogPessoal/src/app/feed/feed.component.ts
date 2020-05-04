@@ -18,10 +18,11 @@ export class FeedComponent implements OnInit {
   constructor(private postagemService: PostagemService) { }
 
   ngOnInit() {
-    this.findallPostagens()
+    this.findAllPostagens()
+    window.scroll(0, 0)
   }
 
-  findallPostagens() {
+  findAllPostagens() {
     this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
       this.listaPostagens = resp
     })

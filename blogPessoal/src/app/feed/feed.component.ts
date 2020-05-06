@@ -29,7 +29,7 @@ export class FeedComponent implements OnInit {
   }
 
   publicar() {
-    this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
+    this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
       location.assign('/feed')
     })
